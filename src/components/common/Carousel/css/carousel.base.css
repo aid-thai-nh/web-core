@@ -1,0 +1,31 @@
+/* Carousel Component Custom Styles */
+
+/* Hiệu ứng chuyển động mượt khi dot active phình rộng */
+.common-carousel-dots button {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.common-carousel-dots button:hover {
+  background-color: rgb(113, 113, 122); /* bg-zinc-500 */
+}
+
+/* Slide flex container transitions */
+.common-carousel-content {
+  will-change: transform;
+}
+
+/* Đảm bảo nút điều hướng căn chỉnh đúng tỉ lệ và không lệch */
+.common-carousel-prev,
+.common-carousel-next {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.common-carousel-prev:hover,
+.common-carousel-next:hover {
+  transform: scale(1.05) translateY(-50%);
+}
+
+.common-carousel-prev:active,
+.common-carousel-next:active {
+  transform: scale(0.95) translateY(-50%);
+}

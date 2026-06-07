@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+:root {
+  --background: 42 30% 95%;
+  --foreground: 210 24% 16%;
+  --card: 0 0% 100%;
+  --card-foreground: 210 24% 16%;
+  --popover: 42 30% 97%;
+  --popover-foreground: 210 24% 16%;
+  --primary: 43 45% 51%;
+  --primary-foreground: 42 30% 95%;
+  --secondary: 41 64% 76%;
+  --secondary-foreground: 210 24% 16%;
+  --muted: 42 20% 97%;
+  --muted-foreground: 215 15% 40%;
+  --accent: 41 64% 76%;
+  --accent-foreground: 210 24% 16%;
+  --destructive: 0 84% 45%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 41 64% 76%;
+  --input: 41 64% 76%;
+  --ring: 43 45% 51%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 42 30% 95%;
+  --foreground: 210 24% 16%;
+  --card: 0 0% 100%;
+  --card-foreground: 210 24% 16%;
+  --popover: 42 30% 97%;
+  --popover-foreground: 210 24% 16%;
+  --primary: 43 45% 51%;
+  --primary-foreground: 42 30% 95%;
+  --secondary: 41 64% 76%;
+  --secondary-foreground: 210 24% 16%;
+  --muted: 42 20% 97%;
+  --muted-foreground: 215 15% 40%;
+  --accent: 41 64% 76%;
+  --accent-foreground: 210 24% 16%;
+  --destructive: 0 84% 45%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 41 64% 76%;
+  --input: 41 64% 76%;
+  --ring: 43 45% 51%;
+}
+
+.bg-champagne-page {
+  background: linear-gradient(135deg, #f7f4ed 0%, #f7f4ed 50%, #ebd197 100%);
+  background-attachment: fixed;
+}
+
+.bg-champagne-metallic {
+  background: linear-gradient(135deg, #f7f4ed 0%, #ebd197 50%, #bb9b49 100%);
+}
+
+.btn-primary {
+  color: #1f2933;
+  background: linear-gradient(135deg, #ebd197 0%, #bb9b49 100%);
+  border: 1px solid #bb9b49;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #f7f4ed 0%, #ebd197 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(187, 155, 73, 0.15);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  scale: 0.98;
+}

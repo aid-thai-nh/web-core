@@ -1,0 +1,144 @@
+/* =====================================================
+   Select Component — Premium Design System
+   ===================================================== */
+
+/* ── Trigger button ────────────────────────────────── */
+.common-select-trigger {
+  position: relative;
+  cursor: pointer;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.06),
+    0 0 0 0 transparent;
+  transition:
+    border-color 0.18s ease,
+    background-color 0.18s ease,
+    box-shadow 0.2s ease;
+}
+
+.common-select-trigger:hover:not(:disabled) {
+  border-color: #bb9b49 !important;
+  background-color: #fdfaf4 !important;
+}
+
+.common-select-trigger:focus-visible {
+  outline: none;
+  border-color: #bb9b49 !important;
+  box-shadow: 0 0 0 4px rgba(187, 155, 73, 0.16) !important;
+}
+
+/* ── Dropdown list panel ───────────────────────────── */
+.common-select-options-list {
+  /* Dark-glass premium panel */
+  background: linear-gradient(160deg, #1a1f26 0%, #141820 60%, #111519 100%);
+  border: 1px solid rgba(187, 155, 73, 0.28);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.45),
+    0 2px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  /* Smooth appear */
+  animation: selectDropdownIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top center;
+
+  /* Scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(187, 155, 73, 0.3) transparent;
+}
+
+.common-select-options-list::-webkit-scrollbar {
+  width: 4px;
+}
+.common-select-options-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.common-select-options-list::-webkit-scrollbar-thumb {
+  background-color: rgba(187, 155, 73, 0.3);
+  border-radius: 9999px;
+}
+
+/* ── Dropdown appear animation ─────────────────────── */
+@keyframes selectDropdownIn {
+  from {
+    opacity: 0;
+    transform: scaleY(0.92) translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1) translateY(0);
+  }
+}
+
+/* ── Placeholder / hint item ───────────────────────── */
+.common-select-option-placeholder {
+  color: rgba(255, 255, 255, 0.28);
+  font-style: italic;
+  font-size: 0.7rem;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid rgba(187, 155, 73, 0.1);
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02em;
+  cursor: default;
+}
+
+/* ── Individual option items ───────────────────────── */
+.common-select-option {
+  position: relative;
+  color: rgba(245, 240, 230, 0.82);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color 0.12s ease,
+    color 0.12s ease,
+    padding-left 0.15s ease;
+  overflow: hidden;
+}
+
+/* Subtle left accent bar on hover */
+.common-select-option::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 2px;
+  border-radius: 9999px;
+  background: #bb9b49;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+/* ── Option: hover (active from keyboard or mouse) ── */
+.common-select-option--active {
+  background: rgba(187, 155, 73, 0.1);
+  color: rgba(245, 240, 230, 1);
+  padding-left: calc(var(--opt-px, 0.75rem) + 4px);
+}
+.common-select-option--active::before {
+  opacity: 1;
+}
+
+/* ── Option: selected ──────────────────────────────── */
+.common-select-option--selected {
+  background: linear-gradient(90deg, rgba(187, 155, 73, 0.18) 0%, rgba(187, 155, 73, 0.08) 100%);
+  color: #ebd197;
+  font-weight: 600;
+}
+.common-select-option--selected::before {
+  opacity: 1;
+  background: linear-gradient(to bottom, #ebd197, #bb9b49);
+}
+
+/* ── Option: disabled ──────────────────────────────── */
+.common-select-option--disabled {
+  opacity: 0.32;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Thin divider between option groups (optional) ── */
+.common-select-divider {
+  height: 1px;
+  background: rgba(187, 155, 73, 0.1);
+  margin: 0.25rem 0.5rem;
+}

@@ -1,0 +1,25 @@
+/* Textarea Component Base Styles */
+
+.common-textarea-field {
+  min-height: 96px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.common-textarea-field:focus {
+  outline: none;
+}
+
+/* Resize variants */
+.common-textarea-resize-none {
+  resize: none;
+}
+
+.common-textarea-resize-vertical {
+  resize: vertical;
+}
+
+.common-textarea-resize-both {
+  resize: both;
+}

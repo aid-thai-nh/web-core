@@ -1,0 +1,71 @@
+/* Radio Component Base Styles */
+
+/* Hide default browser radio input */
+.common-radio-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Custom radio indicator circle */
+.common-radio-indicator {
+  position: relative;
+  width: 1.125rem; /* 18px */
+  height: 1.125rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  border: 2px solid rgba(187, 155, 73, 0.4);
+  background-color: #f7f4ed;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Inner dot — hidden by default */
+.common-radio-indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: #bb9b49;
+  transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Checked state */
+.common-radio-input:checked ~ .common-radio-indicator {
+  border-color: #bb9b49;
+  background-color: #f7f4ed;
+  box-shadow: 0 0 0 3px rgba(187, 155, 73, 0.12);
+}
+
+.common-radio-input:checked ~ .common-radio-indicator::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Hover state (when not disabled) */
+.common-radio-item:not(.common-radio-item--disabled):hover .common-radio-indicator {
+  border-color: #bb9b49;
+}
+
+/* Focus visible */
+.common-radio-input:focus-visible ~ .common-radio-indicator {
+  outline: 2px solid #bb9b49;
+  outline-offset: 2px;
+}
+
+/* Disabled state */
+.common-radio-item--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.common-radio-item--disabled .common-radio-indicator {
+  background-color: rgba(235, 209, 151, 0.2);
+}

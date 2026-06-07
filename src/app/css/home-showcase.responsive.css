@@ -1,0 +1,21 @@
+/* src/app/css/home-showcase.responsive.css */
+@import "../../components/common/Button/css/button.responsive.css";
+
+/* Xử lý responsive cho layout tabs và phần showcase */
+@media (max-width: 767px) {
+  .home-showcase-tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .home-showcase-tab-trigger {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1023px) {
+  .home-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+}

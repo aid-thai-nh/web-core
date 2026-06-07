@@ -1,0 +1,62 @@
+/* Accordion Component Custom Styles */
+
+/* 1. Variants styling */
+
+/* Separated variant: mỗi item là 1 card độc lập */
+.common-accordion-separated .common-accordion-item {
+  border: 1px solid rgba(187, 155, 73, 0.22) !important; /* border-[#BB9B49]/22 */
+  border-radius: 0.75rem !important; /* rounded-xl */
+  background-color: rgba(235, 209, 151, 0.06); /* bg-[#EBD197]/6 */
+  margin-bottom: 0.5rem;
+}
+
+.common-accordion-separated .common-accordion-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Bordered variant: cả nhóm nằm trong 1 khung */
+.common-accordion-bordered .common-accordion-item {
+  border-bottom: 1px solid rgba(187, 155, 73, 0.2);
+}
+
+.common-accordion-bordered .common-accordion-item:last-child {
+  border-bottom: 0;
+}
+
+/* Default variant: chỉ có gạch dưới chân */
+.common-accordion-default .common-accordion-item {
+  border-bottom: 1px solid rgba(187, 155, 73, 0.2);
+}
+
+.common-accordion-default .common-accordion-item:last-child {
+  border-bottom: 0;
+}
+
+/* 2. Size Paddings */
+.common-accordion-sm .common-accordion-trigger {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.8125rem; /* ~13px */
+}
+.common-accordion-sm .common-accordion-content {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.8125rem;
+}
+
+.common-accordion-lg .common-accordion-trigger {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-size: 0.9375rem; /* ~15px */
+}
+.common-accordion-lg .common-accordion-content {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 1.25rem;
+  font-size: 0.9375rem;
+}

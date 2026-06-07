@@ -1,0 +1,30 @@
+/* Custom status badge pulse indicator styling */
+.common-badge-pulse {
+  position: relative;
+  padding-left: 1.5rem !important;
+}
+
+.common-badge-pulse::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+  animation: pulse-dot 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateY(-50%) scale(0.8);
+  }
+}

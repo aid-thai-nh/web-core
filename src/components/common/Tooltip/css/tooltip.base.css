@@ -1,0 +1,80 @@
+/* src/components/common/Tooltip/css/tooltip.base.css */
+
+.common-tooltip-content {
+  z-index: 100;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(187, 155, 73, 0.4);
+  background-color: #1f2933;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #f7f4ed;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  user-select: none;
+  max-width: 280px;
+}
+
+.common-tooltip-content[data-state="delayed-open"][data-side="top"] {
+  animation: tooltip-slide-down-and-fade 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.common-tooltip-content[data-state="delayed-open"][data-side="right"] {
+  animation: tooltip-slide-left-and-fade 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.common-tooltip-content[data-state="delayed-open"][data-side="bottom"] {
+  animation: tooltip-slide-up-and-fade 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.common-tooltip-content[data-state="delayed-open"][data-side="left"] {
+  animation: tooltip-slide-right-and-fade 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.common-tooltip-arrow {
+  fill: #1f2933;
+  stroke: rgba(187, 155, 73, 0.4);
+  stroke-width: 1px;
+}
+
+/* Animations */
+@keyframes tooltip-slide-down-and-fade {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes tooltip-slide-left-and-fade {
+  from {
+    opacity: 0;
+    transform: translateX(4px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes tooltip-slide-up-and-fade {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes tooltip-slide-right-and-fade {
+  from {
+    opacity: 0;
+    transform: translateX(-4px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}

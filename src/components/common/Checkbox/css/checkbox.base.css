@@ -1,0 +1,13 @@
+/* Enable visibility transition on checked sibling */
+.common-checkbox-input:checked + .common-checkbox-indicator svg {
+  opacity: 1;
+}
+
+/* Base scale effect when clicking */
+.common-checkbox-indicator {
+  cursor: pointer;
+}
+
+.common-checkbox-indicator:active {
+  transform: scale(0.92);
+}

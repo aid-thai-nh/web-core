@@ -1,0 +1,74 @@
+/* src/components/common/Alert/css/alert.base.css */
+
+.common-alert {
+  display: flex;
+  position: relative;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid transparent;
+  padding: 1rem;
+  font-size: 0.825rem;
+  line-height: 1.5;
+  transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.common-alert-success {
+  background-color: #eaf4ec;
+  border-color: #c1e1c5;
+  color: #2d5a34;
+}
+
+.common-alert-info {
+  background-color: #e5eef5;
+  border-color: #bcd3e6;
+  color: #1f496b;
+}
+
+.common-alert-warning {
+  background-color: #faf4e5;
+  border-color: #ebd197;
+  color: #6c521f;
+}
+
+.common-alert-error {
+  background-color: #f8eceb;
+  border-color: #ecc7c3;
+  color: #7b241c;
+}
+
+.common-alert-icon {
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 0.125rem;
+}
+
+.common-alert-body {
+  flex: 1;
+}
+
+.common-alert-title {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: currentColor;
+}
+
+.common-alert-close {
+  margin-left: 0.75rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
+  opacity: 0.6;
+  transition: opacity 150ms;
+}
+
+.common-alert-close:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.05);
+}

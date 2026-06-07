@@ -1,0 +1,25 @@
+/* Hiệu ứng bóng đổ mượt nâng cao cho Input khi được focus */
+.common-input-field:focus {
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.15);
+}
+
+/* Hiệu ứng bóng đổ khi báo lỗi */
+.common-input-field.border-rose-500:focus {
+  box-shadow: 0 0 0 2px rgba(244, 63, 94, 0.15);
+}
+
+/* Animation nhấp nháy cho text báo lỗi xuất hiện */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.common-input-error-msg {
+  animation: slideDown 0.2s ease-out;
+}

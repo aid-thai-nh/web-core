@@ -1,0 +1,8 @@
+/* Media queries for Input component responsive adjustments */
+
+@media (max-width: 575px) {
+  /* Di động: Đảm bảo cỡ chữ đủ lớn để tránh bị tự động zoom trên trình duyệt iOS */
+  .common-input-field {
+    font-size: 16px !important;
+  }
+}

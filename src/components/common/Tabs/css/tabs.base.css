@@ -1,0 +1,27 @@
+/* Tabs Component Custom Styles */
+
+/* Hiệu ứng trượt nhẹ/fade-in khi chuyển tab content */
+@keyframes tabContentFade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.common-tabs-content[data-state="active"] {
+  animation: tabContentFade 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Tinh chỉnh đường gạch chân trong line variant để chuyển động mượt */
+.common-tabs-trigger {
+  position: relative;
+}
+
+/* Thêm hiệu ứng nổi bóng mượt cho pill variant */
+.common-tabs-list.bg-zinc-950 {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+}

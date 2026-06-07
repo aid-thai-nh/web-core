@@ -1,0 +1,27 @@
+/* Reusable Navbar Component Styles */
+
+/* Hộp dropdown bóng đổ kép & kính mờ */
+.common-navbar-dropdown {
+  box-shadow:
+    0 10px 30px -10px rgba(24, 24, 27, 0.08),
+    0 1px 0 0 rgba(255, 255, 255, 0.8) inset;
+  transform-origin: top center;
+  transition:
+    opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hiệu ứng trượt lên nhẹ khi hover group */
+.common-navbar-group:hover .common-navbar-dropdown {
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.common-navbar-group .common-navbar-dropdown {
+  transform: translateX(-50%) translateY(6px) scale(0.98);
+}
+
+/* Nút link có tỉ lệ scale micro-interaction */
+.common-navbar-link:active,
+.common-navbar-trigger:active {
+  transform: scale(0.97);
+}

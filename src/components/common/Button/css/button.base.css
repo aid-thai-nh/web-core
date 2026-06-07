@@ -1,0 +1,24 @@
+/* src/components/common/Button/css/button.base.css */
+
+/* Hiệu ứng bóng đổ mượt nâng cao cho Primary Button */
+.common-btn-primary {
+  box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.2);
+}
+
+.common-btn-primary:hover:not(:disabled) {
+  box-shadow: 0 6px 20px 0 rgba(16, 185, 129, 0.3);
+}
+
+/* Hiệu ứng loading quay chậm tinh tế */
+.common-btn-spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

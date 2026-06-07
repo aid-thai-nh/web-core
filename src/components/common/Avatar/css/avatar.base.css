@@ -1,0 +1,30 @@
+/* Custom Avatar Base Styles */
+
+.common-avatar {
+  /* Hiệu ứng mượt khi hover */
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.common-avatar:hover {
+  transform: scale(1.04);
+}
+
+.common-avatar-inner {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Hiệu ứng pulse nhẹ cho online/busy status */
+@keyframes status-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.common-avatar-status-online,
+.common-avatar-status-busy {
+  animation: status-pulse 2s infinite ease-in-out;
+}
