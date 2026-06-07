@@ -1,8 +1,11 @@
 "use client";
 
 import React, { forwardRef, useState, useRef, useEffect, useImperativeHandle } from "react";
+
 import { ChevronDown, Check } from "lucide-react";
+
 import { cn } from "@/lib/utils";
+
 import { SelectProps } from "./select.types";
 import "./css/select.base.css";
 
